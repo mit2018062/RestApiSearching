@@ -32,7 +32,7 @@ public class MyController {
 
      @GetMapping("/patient/list")
     public ResponseEntity<List<Patient>> listAll() {
-         return new ResponseEntity<>(myService.listAll(), HttpStatus.OK);
+         return new ResponseEntity<>(myService.listAll(), HttpStatus.OK.valueOf(200));
     }
 
 /*
@@ -43,7 +43,7 @@ public class MyController {
     */
     @GetMapping("/patient")
     public ResponseEntity<List<Patient>> searchPatient(@RequestParam(value = "name") String name) {
-        return new ResponseEntity<>(myService.getByFnameAndLname(name), HttpStatus.OK);
+        return new ResponseEntity<>(myService.getByFnameAndLname(name), HttpStatus.OK.valueOf(200));
     
     }
 /*
