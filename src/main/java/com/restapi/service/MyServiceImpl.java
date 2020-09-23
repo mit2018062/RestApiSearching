@@ -7,7 +7,7 @@ import java.util.Optional;
 import com.restapi.model.Patient;
 import com.restapi.repository.MyRepository;
 
-import org.apache.commons.lang3.RandomStringUtils;
+//import org.apache.commons.lang3.RandomStringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import org.springframework.stereotype.Service;
@@ -35,13 +35,14 @@ public class MyServiceImpl implements MyService {
         return patients;
     }
 
+    /*
     @Override
     public Patient saveOrUpdate(Patient patient) {
         patient.setPid(RandomStringUtils.randomAlphanumeric(16));
         myRepository.save(patient);
         return patient;
     }
-
+*/
     @Override
     public Optional<Patient> getByPid(String pid) {
         return myRepository.findById(pid);

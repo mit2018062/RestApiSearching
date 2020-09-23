@@ -9,7 +9,7 @@ public interface MyService {
     
     List<Patient> listAll();
     List<Patient> getByFnameAndLname(String name);
-    Patient saveOrUpdate(Patient patient);
+    //Patient saveOrUpdate(Patient patient);
     Optional<Patient> getByPid(String pid);
 
 }
