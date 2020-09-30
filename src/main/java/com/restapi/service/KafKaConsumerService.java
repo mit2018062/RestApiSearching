@@ -4,6 +4,7 @@ import com.restapi.model.AppConstants;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.stereotype.Service;
 
@@ -11,6 +12,9 @@ import org.springframework.stereotype.Service;
 @Service
 public class KafKaConsumerService 
 {
+    @Autowired
+    private MyService myService;
+
     private final Logger logger = 
             LoggerFactory.getLogger(KafKaConsumerService.class);
  
@@ -18,6 +22,7 @@ public class KafKaConsumerService
             groupId = AppConstants.GROUP_ID)
     public void consume(String message) 
     {
-        logger.info(String.format("Message recieved -> %s", message));
+        System.out.println(myService.saveOrUpdate(message));
+        logger.info(String.format("Received Patient id is -> %s", message));
     }
 }

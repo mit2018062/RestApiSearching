@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Optional;
 
 import com.restapi.model.Patient;
+//import com.restapi.model.PatientId;
 
 public interface MyService {
     
@@ -11,5 +12,6 @@ public interface MyService {
     List<Patient> getByFnameAndLname(String name);
     //Patient saveOrUpdate(Patient patient);
     Optional<Patient> getByPid(String pid);
+    String saveOrUpdate(String patientid);
 
 }
