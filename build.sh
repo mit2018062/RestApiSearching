@@ -46,4 +46,6 @@ echo "Running Servers... "
 bin/zookeeper-server-start.sh config/zookeeper.properties &
 bin/kafka-server-start.sh config/server.properties &
 
+mongod --port 27019
 cd /workspace/kafkatutorial
+

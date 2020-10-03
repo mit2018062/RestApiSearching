@@ -22,7 +22,8 @@ public class KafKaConsumerService
             groupId = AppConstants.GROUP_ID)
     public void consume(String message) 
     {
-        System.out.println(myService.saveOrUpdate(message));
+      
         logger.info(String.format("Received Patient id is -> %s", message));
+          System.out.println(myService.saveOrUpdate(message));
     }
 }
