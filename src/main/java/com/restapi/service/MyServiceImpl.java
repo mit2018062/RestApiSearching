@@ -55,6 +55,11 @@ public class MyServiceImpl implements MyService {
         pidRepository.save(patientId);
         return "idsaved";
     }
+    @Override
+    public void delete(String pid) {
+        pidRepository.deleteById(pid);
+    }
+
 
     
     
