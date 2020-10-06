@@ -1,9 +1,16 @@
 package com.restapi.model;
 
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
+import javax.persistence.Entity;
+import javax.persistence.Table;
 
-@Document(collection = "patientid")
+import org.springframework.data.annotation.Id;
+//import org.springframework.data.mongodb.core.mapping.Document;
+
+
+//@Document(collection = "patientid")
+
+@Entity
+@Table(name = "patientid")
 public class PatientId {
     @Id
     private String pid;
