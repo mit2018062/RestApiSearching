@@ -35,7 +35,7 @@ public class MyController {
          return new ResponseEntity<>(myService.listAll(), HttpStatus.OK.valueOf(200));
     }
 
-/*
+    /*
     @GetMapping("/patient")
     public List<Patient> searchPatient(@RequestParam(value = "firstname") String name) {
         return myService.getByFnameAndLname(name);

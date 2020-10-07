@@ -4,17 +4,18 @@ import javax.persistence.Entity;
 import javax.persistence.Table;
 
 import org.springframework.data.annotation.Id;
-//import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.data.mongodb.core.mapping.Document;
 
 
-//@Document(collection = "patientid")
 
-@Entity
-@Table(name = "patientid")
+
+//@Entity
+//@Table(name = "patientid")
+@Document(collection = "patientid")
 public class PatientId {
     @Id
     private String pid;
-    private int age = 10;
+    //private int age = 10;
 
     public PatientId(String pid) {
         this.pid = pid;
@@ -28,12 +29,12 @@ public class PatientId {
         this.pid = pid;
     }
 
-    public int getAge() {
+    /*public int getAge() {
         return age;
     }
 
     public void setAge(int age) {
         this.age = age;
-    }
+    }*/
         
 }

@@ -55,10 +55,17 @@ public class MyServiceImpl implements MyService {
         pidRepository.save(patientId);
         return "idsaved";
     }
-    @Override
+     @Override
+    public String delete(String pid) {
+        PatientId patientId =new PatientId(pid);
+        pidRepository.deleteById(patientId.getPid());
+        return "id deleted";
+    }
+    /*@Override
     public void delete(String pid) {
         pidRepository.deleteById(pid);
-    }
+        System.out.println("id deleted");
+    }*/
 
 
     

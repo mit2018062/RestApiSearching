@@ -20,17 +20,20 @@ public class KafKaConsumerService
     private final Logger logger = 
             LoggerFactory.getLogger(KafKaConsumerService.class);
  
-   /* @KafkaListener(topics = AppConstants.TOPIC_NAME, 
+    @KafkaListener(topics = AppConstants.TOPIC_NAME, 
             groupId = AppConstants.GROUP_ID)
     public void consume(String message) 
     {  
         logger.info(String.format("Received Patient id is -> %s", message));
-          System.out.println(myService.saveOrUpdate(message));
-    }*/
+       System.out.println(myService.saveOrUpdate(message));
+       //System.out.println(myService.delete(message));
+    }
+
+
     //Method to call the delete function 
-     @KafkaListener(topics = AppConstants.TOPIC_NAME, 
-            groupId = AppConstants.GROUP_ID)
-    public void consume(String message) 
+    @KafkaListener(topics = AppConstants.TOPIC_NAME1, 
+            groupId = AppConstants.GROUP_ID1)
+    public void consume1(String message) 
     {  
         logger.info(String.format("Deleted Patient id is -> %s", message));
          // System.out.println(myService.saveOrUpdate(message));
